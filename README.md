@@ -1,6 +1,6 @@
 <div align="center">
   <br/>
-  <img src="https://res.cloudinary.com/stellaraf/image/upload/v1604277355/stellar-logo-gradient.svg" />
+  <img src="https://res.cloudinary.com/stellaraf/image/upload/v1604277355/stellar-logo-gradient.svg" width="300" />
   <br/>
   <h3>Cloudflare worker for handling <a href="https://docs.appneta.com/event-integration.html" rel="noopener noreferrer">AppNeta Event Notifications</a></h3>
   <br/>  
@@ -37,7 +37,7 @@ Typically, an AppNeta observer event looks like this:
 
 This doesn't exactly translate to a useful Slack message, so the worker consumes this data and turns it into something like this:
 
-<img src="https://github.com/stellaraf/worker-appneta/blob/main/screenshot.png" alt="Screenshot" />
+<img src="https://github.com/stellaraf/worker-appneta/blob/main/screenshot.png" alt="Screenshot" width="80%" />
 
 ## Production
 
