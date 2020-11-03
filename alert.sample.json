@@ -34,5 +34,39 @@
     "pathServiceQuality": "SQA_VIOLATED",
     "importance": 5,
     "tags": []
+  },
+  {
+    "type": "NETWORK_CHANGE_EVENT",
+    "description": "TEST",
+    "eventTime": 1604332817,
+    "sequencerName": "wv00-a-ord-04",
+    "sequencerHost": "wv00-a-ord-04",
+    "orgId": 12345,
+    "orgName": "Organization",
+    "deepLink": "https://app.pm.appneta.com/pvc/pathdetail.html?st=12345&pathid=12345&timeStamp=1604332817862",
+    "pathName": "Path Name",
+    "pathId": 12345,
+    "target": "test target",
+    "tracerouteProtocol": "TCP",
+    "oldAsnSequence": "2914,174,1299",
+    "newAsnSequence": "2914,174,3356,1299",
+    "tags": []
+  },
+  {
+    "type": "NETWORK_CHANGE_EVENT",
+    "description": "TEST",
+    "eventTime": 1604332817,
+    "sequencerName": "wv00-a-ord-04",
+    "sequencerHost": "wv00-a-ord-04",
+    "orgId": 12345,
+    "orgName": "Organization",
+    "deepLink": "https://app.pm.appneta.com/pvc/pathdetail.html?st=12345&pathid=12345&timeStamp=1604332817862",
+    "pathName": "Path Name",
+    "pathId": 12345,
+    "target": "test target",
+    "tracerouteProtocol": "TCP",
+    "oldAsnSequence": "2914,174,3356,1299",
+    "newAsnSequence": "2914,174,1299",
+    "tags": []
   }
 ]

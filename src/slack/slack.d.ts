@@ -1,4 +1,4 @@
-export interface CommonProperties {
+interface CommonProperties {
   time: string;
   eventType: string;
   detail: string;

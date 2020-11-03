@@ -1,22 +1,16 @@
 import dayjs from 'dayjs';
 import {
-  getEventType,
-  getServiceQualityStatus,
-  makeTitle,
   mdBold,
-  mdItalic,
   mdLabel,
+  mdItalic,
+  makeTitle,
+  getEventType,
+  formatAsPath,
+  getServiceQualityStatus,
 } from '../formatting';
-import {
-  isNetworkChangeEvent,
-  isSequencerEvent,
-  isServiceQualityEvent,
-  isTestEvent,
-  isWebApplicationEvent,
-} from '../appneta';
+import { dataFactory } from '../appneta';
 
 import type { MessageAttachment } from '@slack/types';
-import type { CommonProperties } from './types';
 
 /**
  * Logo that appears in the Slack message. This was pulled from appneta.com, until they want to
@@ -34,23 +28,14 @@ const WARN =
 const OK =
   'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/white-heavy-check-mark_2705.png';
 
-/**
- * Based on type guard result, appropriately format the AppNeta data as a Slack message.
- */
 export function getBlock(data: AppNeta.Events): MessageAttachment {
-  if (isTestEvent(data)) {
-    return makeTestEventBlock(data);
-  } else if (isSequencerEvent(data)) {
-    return makeSequencerEventBlock(data);
-  } else if (isServiceQualityEvent(data)) {
-    return makeServiceQualityBlock(data);
-  } else if (isNetworkChangeEvent(data)) {
-    return makeNetworkChangeBlock(data);
-  } else if (isWebApplicationEvent(data)) {
-    return makeWebApplicationEventBlock(data);
-  } else {
-    throw new Error('Unsupported data type.');
-  }
+  return dataFactory(data, {
+    WEB_PATH_SQA_EVENT: makeWebApplicationEventBlock,
+    NETWORK_CHANGE_EVENT: makeNetworkChangeBlock,
+    SEQUENCER_EVENT: makeSequencerEventBlock,
+    SQA_EVENT: makeServiceQualityBlock,
+    TEST_EVENT: makeTestEventBlock,
+  });
 }
 
 /**
@@ -71,13 +56,6 @@ function parseCommon(data: AppNeta.Events): CommonProperties {
     clear = true;
   }
   return { detail, time, eventType, clear };
-}
-
-/**
- * Reformat AppNeta's default AS Path field to be more visually friendly.
- */
-function formatAsPath(seq: string): string {
-  return seq.match(/\d+/g).join(' ');
 }
 
 /**

@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "dayjs": "^1.9.4",
+    "query-string": "^6.13.6",
     "title": "^3.4.2"
   },
   "devDependencies": {

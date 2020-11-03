@@ -42,3 +42,10 @@ export function getServiceQualityStatus(status: AppNeta.ServiceQuality): string 
 
   return result;
 }
+
+/**
+ * Reformat AppNeta's default AS Path field to be more visually friendly.
+ */
+export function formatAsPath(seq: string): string {
+  return seq.match(/\d+/g).join(' ');
+}

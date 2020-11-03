@@ -3,6 +3,6 @@ entry-point = "build"
 name = "appneta-alerts"
 route = "workers.stellar.tech/appneta"
 type = "webpack"
-vars = {ENVIRONMENT = "production"}
+vars = {ENVIRONMENT = "production", PERSISTENCE_TIME = 300}
 webpack_config = "webpack.config.js"
 zone_id = "7e9288b41202f31f23e7f6ef5754ba35"
