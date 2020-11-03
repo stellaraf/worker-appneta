@@ -8,6 +8,7 @@
     <img src="https://img.shields.io/github/workflow/status/stellaraf/worker-appneta/TypeCheck?color=%239100fa&event=push&style=for-the-badge" />
   </a>
   <br/>
+  <br/>
 </div>
 
 This repository contains source code for receiving an [AppNeta](https://appneta.com) event notification through their [Observer API](https://docs.appneta.com/event-integration.html) and posting its contents to a [Slack](https://slack.com) channel as an [Incoming Web Hook](https://api.slack.com/messaging/webhooks).
@@ -70,7 +71,6 @@ You'll use the Cloudflare Worker Route/URL you choose as the `url` when adding a
 | `SLACK_ENDPOINT`   | String  |  None   | Slack Incoming Webhook URL where the message will be posted.                  |
 | `PERSISTENCE_TIME` | Integer |  `300`  | Time in seconds before an event matching a previous event will be sent again. |
 
-Additionally, the `PERSISTENCE_TIME` environment variable controls the 
 
 ## Development
 
