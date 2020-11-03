@@ -1,0 +1,38 @@
+[
+  {
+    "type": "SQA_EVENT",
+    "description": "Measured Data Loss (0.0000%) clears condition Data Loss > 2 %",
+    "eventTime": 1602675084,
+    "sequencerName": "example.domain.tld",
+    "sequencerHost": "example.domain.tld",
+    "orgId": 12345,
+    "orgName": "Organization",
+    "deepLink": "https://app.pm.appneta.com/pvc/pathdetail.html?st=12345&pathid=12345&timeStamp=1602675084537",
+    "target": "target.domain.tld",
+    "measuredParam": "DATA_LOSS",
+    "measuredValue": 0,
+    "pathId": 12345,
+    "pathName": "Path between two things",
+    "pathServiceQuality": "SQA_VIOLATED",
+    "importance": 5,
+    "tags": []
+  },
+  {
+    "type": "SQA_EVENT",
+    "description": "Measured Data Loss (2.0700%) violates condition Data Loss > 2 %",
+    "eventTime": 1604332817,
+    "sequencerName": "wv00-a-ord-04",
+    "sequencerHost": "wv00-a-ord-04",
+    "orgId": 12345,
+    "orgName": "Organization",
+    "deepLink": "https://app.pm.appneta.com/pvc/pathdetail.html?st=12345&pathid=12345&timeStamp=1604332817862",
+    "target": "target.domain.tld",
+    "measuredParam": "DATA_LOSS",
+    "measuredValue": 2.07,
+    "pathId": 62155,
+    "pathName": "USA, Chicago <-> a thing (single)",
+    "pathServiceQuality": "SQA_VIOLATED",
+    "importance": 5,
+    "tags": []
+  }
+]
