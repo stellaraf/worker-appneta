@@ -4,9 +4,10 @@
   <br/>
   <h3>Cloudflare worker for handling <a href="https://docs.appneta.com/event-integration.html" rel="noopener noreferrer">AppNeta Event Notifications</a></h3>
   <br/>
-  <a href="https://github.com/stellaraf/worker-appneta/actions?query=workflow%3Atsc">
-    <img src="https://img.shields.io/github/workflow/status/stellaraf/worker-appneta/tsc?event=push&style=for-the-badge" />
+  <a href="https://github.com/stellaraf/worker-appneta/actions?query=workflow%3ATypeCheck">
+    <img src="https://img.shields.io/github/workflow/status/stellaraf/worker-appneta/TypeCheck?color=%239100fa&event=push&style=for-the-badge" />
   </a>
+  <br/>
 </div>
 
 This repository contains source code for receiving an [AppNeta](https://appneta.com) event notification through their [Observer API](https://docs.appneta.com/event-integration.html) and posting its contents to a [Slack](https://slack.com) channel as an [Incoming Web Hook](https://api.slack.com/messaging/webhooks).
