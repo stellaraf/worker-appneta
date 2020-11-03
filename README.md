@@ -8,7 +8,7 @@
 
 This repository contains source code for receiving an [AppNeta](https://appneta.com) event notification through their [Observer API](https://docs.appneta.com/event-integration.html) and posting its contents to a [Slack](https://slack.com) channel as an [Incoming Web Hook](https://api.slack.com/messaging/webhooks).
 
-_This is **NOT** official AppNeta software. While anyone is welcome to use it per the [license](https://github.com/stellaraf/worker-appneta/blob/main/LICENSe.md), this is neither supported nor sanctioned by AppNeta in any way._
+_This is **NOT** official AppNeta software. While anyone is welcome to use it per the [license](https://github.com/stellaraf/worker-appneta/blob/main/LICENSE), this is neither supported nor sanctioned by AppNeta in any way._
 
 # How it Works
 
