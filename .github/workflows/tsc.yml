@@ -6,7 +6,7 @@ on:
 jobs:
   tsc:
     name: tsc
-    runs-on: ubuntu-latest
+    runs-on: codebuild-stellaraf-actions-public-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v1
       - name: install node v12
